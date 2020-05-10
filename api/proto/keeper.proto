@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package api;
+
+service Keeper {
+  rpc Ask (AskRequest) returns (AskResponse) {}
+}
+
+message AskRequest {
+  int32 x = 1;
+  int32 y = 2;
+}
+
+message AskResponse {
+  int32 result = 1;
+}
