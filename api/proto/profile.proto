@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package api;
+
+message Profile {
+    // Account age in days
+    int32 account_age = 1;
+    int32 ddd = 2;
+
+    enum Status {
+        VERIFIED = 0;
+        WAITING = 1;
+    }
+    Status status = 3;
+    string name = 4;
+}

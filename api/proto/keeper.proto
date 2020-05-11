@@ -2,15 +2,20 @@ syntax = "proto3";
 
 package api;
 
+import "api/proto/profile.proto";
+import "api/proto/shop_summary.proto";
+import "api/proto/payment_info.proto";
+
 service Keeper {
   rpc Ask (AskRequest) returns (AskResponse) {}
 }
 
 message AskRequest {
-  int32 x = 1;
-  int32 y = 2;
+  Profile profile = 1;
+  ShopSummary shop_summary = 2;
+  PaymentInfo payment_info = 3;
 }
 
 message AskResponse {
-  int32 result = 1;
+  bool allow_pass = 1;
 }
