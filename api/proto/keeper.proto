@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package api;
 
+option go_package = "pkg/api";
+
 import "api/proto/profile.proto";
 import "api/proto/shop_summary.proto";
 import "api/proto/payment_info.proto";

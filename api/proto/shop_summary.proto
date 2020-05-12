@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package api;
 
+option go_package = "pkg/api";
+
 message ShopSummary {
     int32 total_orders = 1;
 }
