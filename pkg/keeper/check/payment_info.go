@@ -1,10 +1,18 @@
 package check
 
-import "github.com/billcunha/bridgekeeper/pkg/api"
+import (
+	"errors"
+
+	"github.com/billcunha/bridgekeeper/pkg/api"
+)
 
 // PaymentInfo get the score based on PaymentInfo
 func PaymentInfo(payment *api.PaymentInfo) (int32, error) {
 	var score int32
+
+	if payment == nil {
+		return 0, errors.New("Invalid PaymentInfo")
+	}
 
 	if payment.CardholderName == "" {
 		score += 20

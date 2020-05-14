@@ -20,4 +20,5 @@ message AskRequest {
 
 message AskResponse {
   bool allow_pass = 1;
+  int32 score = 2;
 }
